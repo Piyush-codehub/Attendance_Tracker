@@ -1,0 +1,107 @@
+/* Profile Toggle Button */
+.profile-btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1001;
+  cursor: pointer;
+}
+
+.profile-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid #2c3e50;
+  transition: transform 0.6s ease;
+}
+
+/* Sidebar Styling */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 220px;
+  background-color: #40513B;
+  padding-top: 120px;
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: all 0.5s ease;
+  z-index: 1000;
+}
+
+/* When sidebar should be visible */
+.sidebar.active {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* Navigation Links Inside Sidebar */
+.nav-links {
+  list-style: none;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  transform: translateY(-20px);
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.sidebar.active .nav-links {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  padding: 10px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.nav-links li a:hover {
+  background-color:  #7c765f;
+  transform: scale(1.05);
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  padding: 40px;
+  margin-left: 220px;
+}
+
+/* Responsive Sidebar Collapse on Small Screens */
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 0;
+  }
+
+  .sidebar {
+    width: 200px;
+  }
+
+  .profile-img {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+/* Footer Styling */
+.site-footer {
+  /* background-color: #504B38; */
+  color: white;
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 0.9rem;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+/* .sidebar.active {
+  left: 0;
+} */

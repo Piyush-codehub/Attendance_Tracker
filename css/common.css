@@ -1,0 +1,272 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #9DC08B;
+  color: #333;
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.settings-box {
+  width: 100%;
+  max-width: 400px;
+  background-color: #609966;
+  border: 2px solid black;
+  border-radius: 15px;
+  padding: 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 8vh;
+}
+
+.card-box {
+  background-color: #7b8891;
+  border: 2px solid black;
+  border-radius: 15px;
+  padding: 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  width: 100%;
+  max-width: 600px;
+}
+
+h1, h2, h3 {
+  color: #333;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+/* === Inputs === */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+select {
+  width: 100%;
+  padding: 12px;
+  margin-top: 20px;
+  border: none;
+  background-color: white;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-style: italic;
+  text-align: center;
+}
+
+input::placeholder {
+  color: black;
+  opacity: 0.7;
+}
+
+/* === Buttons === */
+button,
+.submit-btn {
+  background-color: #504B38;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+button:hover,
+.submit-btn:hover {
+  background-color: #7c765f;
+}
+
+/* === Links === */
+a {
+  text-decoration: none;
+  color: #eee;
+  font-size: 0.9rem;
+}
+
+a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* === Utilities === */
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.shadow {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.rounded {
+  border-radius: 10px;
+}
+
+.full-height {
+  height: 100vh;
+}
+
+/* ===== Responsive Styles ===== */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: 20px;
+    height: auto;
+  }
+
+  .card-box,
+  .login-box,
+  .settings-box,
+  .profile-box,
+  .dashboard-box {
+    width: 100%;
+    max-width: 90%;
+    padding: 20px;
+    margin: auto;
+    box-sizing: border-box;
+  }
+
+  input,
+  select,
+  button {
+    font-size: 1rem;
+  }
+
+  .profile img,
+  .progress-bar,
+  .subject {
+    width: 150px !important;
+    height: 150px !important;
+  }
+
+  .profile-details {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .sub-progress {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+}
+
+a.submit-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* 🌙 Global Dark Mode Base */
+body.dark-mode {
+  background-color: #1E2B1F;
+  color: #D3D9D1;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3{
+  color: #D3D9D1;
+}
+
+body.dark-mode .container {
+  background-color: #1E2B1F;
+}
+body.dark-mode .settings-box,
+body.dark-mode .login-box,
+body.dark-mode .dashboard-box,
+body.dark-mode .profile-box {
+  background-color: #2F4D37;
+  color: #D3D9D1;
+}
+
+/* 🧾 Input elements */
+body.dark-mode input,
+body.dark-mode select,
+body.dark-mode textarea {
+  background-color: #2A3328;
+  color: #D3D9D1;
+  border: 1px solid #495E4B;
+  padding: 8px 10px;
+  border-radius: 4px;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+body.dark-mode input:focus,
+body.dark-mode select:focus,
+body.dark-mode textarea:focus {
+  border-color: #7FC097;
+  outline: none;
+}
+
+/* ✒️ Placeholder styling */
+body.dark-mode ::placeholder {
+  color: #aaa;
+}
+
+/* 🔘 Buttons */
+body.dark-mode button {
+  background-color: #9C9A7A;
+  color: #1E2B1F;
+  transition: background-color 0.3s ease;
+}
+
+body.dark-mode button:hover {
+  background-color: #B2B08A;
+}
+
+body.dark-mode .day
+{
+  background-color: #1E2B1F;
+  transition: all 0.3s ease;
+}
+
+body.dark-mode .day:hover
+{
+  transform: scale(1.1);
+}
+

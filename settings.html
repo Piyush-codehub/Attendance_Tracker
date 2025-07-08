@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Settings</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/settings.css" />
+    <link rel="stylesheet" href="css/navbar.css" />
+</head>
+
+<body>
+
+    <script>
+        if (localStorage.getItem("isLoggedIn") !== "true") {
+            alert("Please login first.");
+            window.location.href = "index.html";
+        }
+    </script>
+
+
+    <div id="navbar-container"></div>
+
+    <div class="container">
+        <div class="settings-box">
+            <div class="settings-heading">
+                <h1>Settings</h1>
+            </div>
+
+            <div class="theme-toggle">
+                <label class="switch">
+                    <input type="checkbox" id="theme-toggle" />
+                    <span class="slider"></span>
+                </label>
+                <span id="theme-label" class="theme-text">Light Mode</span>
+            </div>
+
+            <button class="more-services">More Services</button>
+            <button class="delete-account">Delete Account</button>
+        </div>
+    </div>
+
+    <div id="footer-container"></div>
+    
+
+    <script src="js/navbar.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/settings.js"></script>
+
+</body>
+
+</html>

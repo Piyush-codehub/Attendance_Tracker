@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Profile</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/profile.css" />
+    <link rel="stylesheet" href="css/navbar.css" />
+</head>
+
+<body>
+
+    <script>
+        if (localStorage.getItem("isLoggedIn") !== "true") {
+            alert("Please login first.");
+            window.location.href = "index.html";
+        }
+    </script>
+
+
+    <div id="navbar-container"></div>
+
+
+    <div class="container">
+        <div class="profile-box">
+            <div class="profile-update">
+                <div class="img-username">
+
+                    <label for="profileInput">
+                        <img id="profileImage" src="assets/profile.png" alt="profile-pic">
+                    </label>
+                    <input type="file" id="profileInput" accept="image/*" hidden />
+
+                    <h2 id="profile-username">@username</h2>
+
+                </div>
+            </div>
+
+
+            <form class="details">
+                <div class="name">
+                    <input id="first-name" type="text" placeholder="First Name" required />
+                    <input id="last-name" type="text" placeholder="Last Name" />
+                </div>
+
+                <input id="mobile" type="number" placeholder="Mobile no." required />
+                <input id="email" type="email" placeholder="Email" required />
+                <select name="Session" id="session" required>
+                    <option value="">--Session--</option>
+                    <option value="2025-29">2025-29</option>
+                    <option value="2024-28">2024-28</option>
+                    <option value="2023-27">2023-27</option>
+                    <option value="2022-26">2022-26</option>
+                </select>
+                <!-- <input id="branch" type="text" placeholder="Branch" required /> -->
+                <select name="branch" id="branch" required>
+                    <option value="">--Branch--</option>
+                    <option value="CSE">Computer Science Engineering</option>
+                    <option value="DSE">Data Science Engineering</option>
+                    <option value="EEE">Electrical & Electronic Engineering</option>
+                    <option value="CE">Civil Engineering</option>
+                    <option value="ME">Mechanical Engineering</option>
+                    <option value="CHE">Chemical Engineering</option>
+                </select>
+                <!-- <input id="sem" type="text" placeholder="Sem" required /> -->
+                <select name="Semester" id="sem" required>
+                    <option value="" disabled selected>--Sem--</option>
+                    <option value="1st">1st</option>
+                    <option value="2nd">2nd</option>
+                    <option value="3rd">3rd</option>
+                    <option value="4th">4th</option>
+                    <option value="5th">5th</option>
+                    <option value="6th">6th</option>
+                    <option value="7th">7th</option>
+                    <option value="8th">8th</option>
+                </select>
+
+
+                <button type="submit">Update Profile</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="footer-container"></div>
+
+    <script src="js/navbar.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/profile.js"></script>
+
+</body>
+
+</html>

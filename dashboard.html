@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/dashboard.css" />
+</head>
+
+<body>
+
+    <script>
+        if (localStorage.getItem("isLoggedIn") !== "true") {
+            alert("Please login first.");
+            window.location.href = "index.html";
+        }
+    </script>
+
+    <div id="navbar-container"></div>
+
+    <div class="container">
+        <!-- <div class="dashboard-box"> -->
+            <div class="dashboard">
+                <h1 class="heading">My Dashboard</h1>
+
+                <div class="profile-details">
+                    <div class="details">
+                        <h1 class="name" id="dash-name">Your Name</h1>
+                        <h2 class="branch" id="dash-branch">Branch</h2>
+                        <h3 class="sem" id="dash-sem">Semester</h3>
+                    </div>
+                </div>
+
+                <div class="progress">
+                    <div class="subject biometric">
+                        <div class="circular-progress" data-progress="0">
+                            <span class="value">0%</span>
+                        </div>
+                        <h1>Biometric</h1>
+                        <div class="stats" id="biometric-stats">
+                            <p>Present: 0</p>
+                            <p>Absent: 0</p>
+                            <p>Total: 0</p>
+                        </div>
+                    </div>
+
+                    <div id="schedule" class="filter-options">
+                        <button id="this-week">This Week</button>
+                        <button id="upto">Upto</button>
+                    </div>
+                </div>
+
+                <button onclick="window.location.href='updates.html'" class="update-btn">Update Attendance</button>
+
+                <div class="sub-progress">
+                    <div class="subject chem">
+                        <div class="circular-progress" data-progress="0">
+                            <span class="value">0%</span>
+                        </div>
+                        <h1>CHEM</h1>
+                        <div class="stats" id="chem-stats">
+                            <p>Present: 0</p>
+                            <p>Absent: 0</p>
+                            <p>Total: 0</p>
+                            <!-- <p class="warning" id="chem-warning"></p> -->
+                        </div>
+                    </div>
+
+                    <div class="subject python">
+                        <div class="circular-progress" data-progress="0">
+                            <span class="value">0%</span>
+                        </div>
+                        <h1>PYTHON</h1>
+                        <div class="stats" id="python-stats">
+                            <p>Present: 0</p>
+                            <p>Absent: 0</p>
+                            <p>Total: 0</p>
+                            <!-- <p class="warning" id="python-warning"></p> -->
+                        </div>
+                    </div>
+
+                    <div class="subject iwd">
+                        <div class="circular-progress" data-progress="0">
+                            <span class="value">0%</span>
+                        </div>
+                        <h1>IWD</h1>
+                        <div class="stats" id="iwd-stats">
+                            <p>Present: 0</p>
+                            <p>Absent: 0</p>
+                            <p>Total: 0</p>
+                            <!-- <p class="warning" id="iwd-warning"></p> -->
+                        </div>
+                    </div>
+
+                    <div class="subject maths">
+                        <div class="circular-progress" data-progress="0">
+                            <span class="value">0%</span>
+                        </div>
+                        <h1>MATHS</h1>
+                        <div class="stats" id="maths-stats">
+                            <p>Present: 0</p>
+                            <p>Absent: 0</p>
+                            <p>Total: 0</p>
+                            <!-- <p class="warning" id="maths-warning"></p> -->
+                        </div>
+                    </div>
+
+                    <div class="subject english">
+                        <div class="circular-progress" data-progress="0">
+                            <span class="value">0%</span>
+                        </div>
+                        <h1>ENGLISH</h1>
+                        <div class="stats" id="english-stats">
+                            <p>Present: 0</p>
+                            <p>Absent: 0</p>
+                            <p>Total: 0</p>
+                            <!-- <p class="warning" id="english-warning"></p> -->
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        <!-- </div> -->
+    </div>
+
+    <div id="footer-container"></div>
+    <script>
+
+    </script>
+
+    <script src="js/common.js"></script>
+    <script src="js/dashboard.js"></script>
+    <script src="js/navbar.js"></script>
+
+</body>
+
+</html>

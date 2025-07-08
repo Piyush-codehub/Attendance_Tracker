@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Attendance Calendar</title>
+  <link rel="stylesheet" href="css/common.css" />
+  <link rel="stylesheet" href="css/calendar.css" />
+  <link rel="stylesheet" href="css/navbar.css" />
+</head>
+
+<body>
+
+  <script>
+    if (localStorage.getItem("isLoggedIn") !== "true") {
+      alert("Please login first.");
+      window.location.href = "index.html";
+    }
+  </script>
+
+  <div id="navbar-container"></div>
+
+  <div class="container">
+    <div class="calendar-box">
+      <h1>Attendance Calendar</h1>
+      <div id="calendar"></div>
+      <!-- ✅ Add Edit Attendance Link Below -->
+      <div style="text-align: center; margin-top: 20px;">
+        <a href="edit-attendance.html" class="submit-btn">✏️ Edit Past Attendance</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="footer-container"></div>
+
+  <script src="js/navbar.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/calendar.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,146 @@
+.profile-details {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  gap: 5vh;
+  margin-bottom: 5vh;
+}
+
+.heading {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-top: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-style: italic;
+  font-family: cursive;
+}
+
+.update-btn {
+  margin-left: 3vh;
+}
+
+.name {
+  font-size: 5vh;
+}
+
+.progress {
+  display: flex;
+  align-items: center;
+  gap: 5vh;
+  margin-top: 5vh;
+}
+
+#schedule {
+  height: 5vh;
+  border-radius: 1vh;
+  font-style: italic;
+  font-size: 1rem;
+  padding: 0 1rem;
+  cursor: pointer;
+  display: none;
+}
+
+.sub-progress {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 5vh;
+  flex-wrap: wrap;
+  gap: 5vh;
+}
+
+.subject {
+  height: 30vh;
+  width: 30vh;
+  border-radius: 5vh;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+  background-color: #609966;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.6s ease;
+  cursor: pointer;
+}
+
+.subject:hover {
+  transform: translateY(-2vh);
+}
+
+.subject h1 {
+  font-family: cursive;
+  font-style: italic;
+}
+
+.stats {
+  text-align: center;
+  font-size: large;
+}
+
+.warning {
+  font-weight: bold;
+  font-size: 0.8rem;
+  margin-top: 5px;
+}
+
+.circular-progress {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: conic-gradient(#3498db 0deg, #ddd 0deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  font-weight: bold;
+  font-size: 18px;
+  color: #333;
+  transition: background 0.4s ease;
+  margin: auto;
+  transition: background 0.6s ease;
+}
+.circular-progress .value {
+  transition: color 0.3s ease;
+}
+
+.circular-progress::before {
+  content: "";
+  position: absolute;
+  width: 75%;
+  height: 75%;
+  background-color: #fff;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.circular-progress .value {
+  position: relative;
+  z-index: 2;
+}
+
+.filter-options {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.filter-options button {
+  padding: 8px 16px;
+  margin: 5px;
+  font-weight: bold;
+  border: none;
+  background-color:#504B38;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.filter-options button.active {
+  background-color: #3498db;
+  color: white;
+}

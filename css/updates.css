@@ -1,0 +1,35 @@
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2vh;
+}
+
+.mark {
+  background: gray;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.mark.present {
+  background: green;
+}
+
+.mark.absent {
+  background: red;
+}
+
+.submit-btn {
+  margin-top: 2vh;
+  padding: 10px;
+  font-size: 1rem;
+  border: none;
+  background: #333;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}

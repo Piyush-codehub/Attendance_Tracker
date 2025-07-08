@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Edit Past Attendance</title>
+  <link rel="stylesheet" href="css/common.css" />
+  <link rel="stylesheet" href="css/updates.css" />
+  <link rel="stylesheet" href="css/navbar.css" />
+</head>
+
+<body>
+
+  <script>
+    if (localStorage.getItem("isLoggedIn") !== "true") {
+      alert("Please login first.");
+      window.location.href = "index.html";
+    }
+  </script>
+
+  <div id="navbar-container"></div>
+
+  <div class="container">
+    <div class="settings-box">
+      <div class="settings-heading">
+        <h1>Edit Past Attendance</h1>
+      </div>
+
+      <div class="form-row">
+        <label>Select Date:</label>
+        <input type="date" id="edit-date" max="">
+      </div>
+
+      <form id="edit-form" class="form">
+        <div class="form-row">
+          <label>BIOMETRIC:</label>
+          <button type="button" class="mark" data-subject="BIOMETRIC">Mark</button>
+        </div>
+        <div class="form-row">
+          <label>CHEM:</label>
+          <button type="button" class="mark" data-subject="CHEM">Mark</button>
+        </div>
+        <div class="form-row">
+          <label>PYTHON:</label>
+          <button type="button" class="mark" data-subject="PYTHON">Mark</button>
+        </div>
+        <div class="form-row">
+          <label>IWD:</label>
+          <button type="button" class="mark" data-subject="IWD">Mark</button>
+        </div>
+        <div class="form-row">
+          <label>MATHS:</label>
+          <button type="button" class="mark" data-subject="MATHS">Mark</button>
+        </div>
+        <div class="form-row">
+          <label>ENGLISH:</label>
+          <button type="button" class="mark" data-subject="ENGLISH">Mark</button>
+        </div>
+
+        <button type="submit" class="submit-btn">💾 Save Attendance</button>
+      </form>
+
+      <p id="edit-message" style="text-align:center; margin-top:10px;"></p>
+    </div>
+  </div>
+
+  <div id="footer-container"></div>
+
+  <script src="js/navbar.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/edit-attendance.js"></script>
+</body>
+
+</html>
